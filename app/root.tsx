@@ -55,7 +55,7 @@ export default function AppWithProvider(){
         <PreventFlashOnWrongTheme ssrTheme={Boolean(theme)} />
         <Links />
       </head>
-      <body className="bg-white text-black dark:bg-slate-900 dark:text-white font-medium h-full selection:bg-gray-50 dark: selection: bg-slate-500 ">
+      <body className="bg-white text-black dark:bg-stone-900 dark:text-white font-medium h-full selection:bg-gray-50 dark: selection: bg-slate-500 ">
      <Layout>
      <Outlet />
       <ScrollRestoration />
@@ -72,7 +72,7 @@ function Layout ({children} : {children : ReactNode} )
   return(
   <div>
     <Navbar/>
-    <main className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">{children}</main>
+    <main className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-4">{children}</main>
 
   </div>
   )
