@@ -62,7 +62,7 @@ const Index = () => {
 
           <MotionText duration={1} className="text-zinc-600 dark:text-gray-400 text-center font-bold font-serif ">
 
-            Frontend Software engineer with a geeky flair, crafting digital experiences through code.
+          Frontend software engineer who's a gaming geek and tech enthusiast. 🚀🎨🕹️
 
           </MotionText>
 
