@@ -72,7 +72,7 @@ function Layout ({children} : {children : ReactNode} )
   return(
   <div>
     <Navbar/>
-    <main className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-4">{children}</main>
+    <main className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-4">{children}</main>
 
   </div>
   )
