@@ -4,6 +4,7 @@ import React from 'react'
 import { NavLink } from 'react-router-dom'
 import { Theme, useTheme } from 'remix-themes'
 import Dbutton from './Dbutton'
+import ColorChangingWrapper from './ColorChangingWrapper'
 
 const Navbar = () => {
     const [darkTheme, setDarkTheme] = useTheme();
@@ -15,7 +16,7 @@ const Navbar = () => {
                         <div className='flex justify-between w-full'>
                             <div className='flex items-center'>
                                 <Link to="/">
-                                    <h1 className='test-2xl font-medium '>Lina<span className='text-purple-800'>Mahrouch</span></h1>
+                                    <ColorChangingWrapper size="medium">ElinaCodes</ColorChangingWrapper>
                                 </Link>
                             </div>
                             <div className='hidden sm:nl-6 sm:flex sm:space-x-8'>
