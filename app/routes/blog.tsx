@@ -1,0 +1,77 @@
+import React from 'react'
+import { Link, useLoaderData } from "@remix-run/react";
+import { LoaderArgs, json } from '@remix-run/node';
+import { gql } from 'graphql-request';
+import { hygraph } from '~/utils/hygraph.server';
+import { Post } from '~/utils/interface';
+
+interface AppProps {
+    posts: Post;
+}
+export async function loader({}: LoaderArgs) {
+    const query = gql`
+    query Posts {
+        posts {
+          createdAt
+          id
+          overview
+          slug
+          title
+          updatedAt
+        }
+      }
+    
+    `;
+     const posts= await hygraph.request(query)
+     
+      return json({posts})
+    
+}
+const Blog = () => {
+    const {posts} = useLoaderData() as AppProps;
+  return (
+    <>
+       <>
+      
+        <div className="space-2 pt-6 pb-8 md:space-y-5">
+          <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
+            My BlogPost
+          </h1>
+        </div>
+        <ul>
+         {posts.posts.map((post) =>
+        
+            <li key={post.id} className="py-4">
+              <article className="space-y-2 xl:grid xl:grid-cols-4 xl:items-baseline xl:space-y-0">
+                <div>
+                  <p className="text-base font-medium leading-6 dark:text-green-300 text-purple-700">
+                   {new Date(post.createdAt).toISOString().split('T')[0]}
+                  </p>
+                </div>
+
+                <Link
+                  to="/"
+                  className="space-y-3 xl:col-span-3"
+                  prefetch="intent"
+                >
+                  <div>
+                    <h3 className="text-2xl font-bold leading-8 tracking-tight text-gray-900 dark:text-gray-100">
+                      test
+                    </h3>
+                  </div>
+                  <div className="prose max-w-none text-gray-600 dark:text-gray-400">
+                    test
+                  </div>
+                </Link>
+              </article>
+            </li>
+             )}
+        
+        </ul>
+    
+    </>
+    </>
+  )
+}
+
+export default Blog

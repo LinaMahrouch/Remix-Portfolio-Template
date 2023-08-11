@@ -3,7 +3,7 @@ import MyImg from "../../public/MyImg.jpeg"
 import { motion } from "framer-motion"
 import MotionText from '../components/MotionText'
 import MeTerminal from '~/components/MeTerminal'
-import Card from '~/components/Card'
+
 import ColorChangingWrapper from "../components/ColorChangingWrapper"
 
 const imageVariants = {
@@ -63,7 +63,7 @@ const Index = () => {
 
           <MotionText duration={1} className="text-zinc-600 dark:text-gray-400  font-bold  ">
 
-          Frontend software engineer who's a gaming geek and tech enthusiast. 🚀🎨🕹️
+          Frontend software engineer who's a gaming geek and tech enthusiast. 🚀🕹️
 
           </MotionText>
 
