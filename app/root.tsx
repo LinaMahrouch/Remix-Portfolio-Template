@@ -14,6 +14,7 @@ import stylesheet from "~/tailwind.css";
 import { darkSessionResolver } from "./utils/session.server";
 import { PreventFlashOnWrongTheme, ThemeProvider, useTheme } from "remix-themes";
 import Navbar from "./components/Navbar";
+
 import { ReactNode } from "react";
 
 export const links: LinksFunction = () => [
@@ -55,7 +56,7 @@ export default function AppWithProvider(){
         <PreventFlashOnWrongTheme ssrTheme={Boolean(theme)} />
         <Links />
       </head>
-      <body className="bg-white text-black dark:bg-stone-900 dark:text-white font-medium h-full selection:bg-gray-50 dark: selection: bg-slate-500 ">
+      <body className="bg-white text-black dark:bg-stone-900 dark:text-white font-medium h-full selection:bg-gray-50 dark: selection:  ">
      <Layout>
      <Outlet />
       <ScrollRestoration />
