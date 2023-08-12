@@ -1,6 +1,12 @@
-# Welcome to Remix!
+# Remix-portfolio!
+This is a Remix based portfolio made with:
+- [Remix.Run](https://remix.run)
+- [Tailwind.css](https://tailwindcss.com/)
+- [GraphQl](https://graphql.org/)
+- [Headlessui](https://headlessui.com/)
+- [Vercel For deployement](https://vercel.com/docs/concepts/deployments/overview)
 
-- [Remix Docs](https://remix.run/docs)
+### [Remix Docs](https://remix.run/docs)
 
 ## Deployment
 
