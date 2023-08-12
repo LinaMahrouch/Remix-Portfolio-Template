@@ -17,7 +17,21 @@ export interface Post {
       title: string;
       slug: string;
       publishedAt: string;
-      body: any;
+      content: any;
     };
   }
+
+  export interface Project {
+    projects: {
+      id: string;
+      link: string;
+      title: string;
+      overview: string;
+      titleImage: {
+        url: string;
+      };
+      publishedAt: string;
+    }[];
+  }
+  
   
