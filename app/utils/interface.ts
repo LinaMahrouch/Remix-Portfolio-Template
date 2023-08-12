@@ -17,7 +17,6 @@ export interface Post {
       title: string;
       slug: string;
       publishedAt: string;
-<<<<<<< HEAD
       content: any;
     };
   }
@@ -35,9 +34,4 @@ export interface Post {
     }[];
   }
   
-=======
-      body: any;
-    };
-  }
->>>>>>> 0a0dcba4c30cafb6e80c266e0aa3ff73e40a8876
   
