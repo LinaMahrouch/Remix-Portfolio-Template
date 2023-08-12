@@ -41,26 +41,26 @@ const Blog = () => {
         <ul>
          {posts.posts.map((post) =>
         
-            <li key={post.id} className="py-4">
-              <article className="space-y-2 xl:grid xl:grid-cols-4 xl:items-baseline xl:space-y-0">
+            <li key={post.id} className="py-4 ">
+              <article className="space-y-2 xl:grid xl:grid-cols-4 xl:items-baseline xl:space-y-0 hover:bg-zinc-200 dark:hover:bg-zinc-800">
                 <div>
-                  <p className="text-base font-medium leading-6 dark:text-green-300 text-purple-700">
+                  <p className="text-base font-medium leading-6 dark:text-zinc-500 text-zinc-700">
                    {new Date(post.createdAt).toISOString().split('T')[0]}
                   </p>
                 </div>
 
                 <Link
-                  to="/"
+                  to={`/post/${post.slug}`}
                   className="space-y-3 xl:col-span-3"
                   prefetch="intent"
                 >
                   <div>
-                    <h3 className="text-2xl font-bold leading-8 tracking-tight text-gray-900 dark:text-gray-100">
-                      test
+                    <h3 className="text-xl font-bold leading-6 tracking-tight text-gray-900 dark:text-gray-100">
+                      {post.title}
                     </h3>
                   </div>
                   <div className="prose max-w-none text-gray-600 dark:text-gray-400">
-                    test
+                    {post.overview}
                   </div>
                 </Link>
               </article>

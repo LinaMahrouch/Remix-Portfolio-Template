@@ -8,3 +8,16 @@ export interface Post {
       
     }[];
   }
+
+
+  export interface PostId {
+    post: {
+      id: string;
+      overview: string;
+      title: string;
+      slug: string;
+      publishedAt: string;
+      body: any;
+    };
+  }
+  

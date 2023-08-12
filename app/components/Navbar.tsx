@@ -149,7 +149,7 @@ const Navbar = () => {
                     <Disclosure.Panel className="sm:hidden ">
                         <div className='pt-2 pb-3 space-y-1 '>
                             <NavLink
-                                className={({ isActive }) => isActive ? "bg-teal-50 border-violet-500 text-slate-00 block pl-3 pr-4 py-2 border-l-4 text-base font-medium dark:bg-violet-900"
+                                className={({ isActive }) => isActive ? "bg-teal-50  border-violet-500 text-slate-00  block pl-3 pr-4 py-2 border-l-4 text-base font-medium dark:bg-violet-900"
                                     : "border-transparent text-gray-500 hover:bg-gray-50 hover:border-indigo-900 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium dark:text-white dark:hover:bg-gray-700"}
                                 to="/">
 
