@@ -24,7 +24,7 @@ const KnowMe = () => {
          
           <p className=" pl-1 text-lg font-bold">
           <TypingEffect text="Hii, I'm Lina Mahrouch 👋" /></p>
-            <p className="pl-1 pb-1 text-1em">A Frontend Software Engineer, professional Valorant player, and competitive tennis enthusiast based in Morocco. I have a passion for creating impactful fullstack web applications with React and its frameworks, especially <a href="https://remix.run/" className='text-white rounded bg-slate-800 dark:text-black dark:bg-slate-300 dark:hover:bg-purple-500' > Remix.Run</a> & <a href="https://remix.run/" className=' dark:bg-slate-300  bg-slate-800 rounded text-white dark:text-black dark:hover:bg-blue-500' >NextJs.</a> </p> <p className="pl-1 pb-1"> Precision defines me, both in the digital realm and on the court. </p> 
+            <p className="pl-1 pb-1 text-1em">A Frontend Software Engineer, professional Valorant player, and competitive tennis enthusiast based in Morocco. I have a passion for creating impactful fullstack web applications with React and its frameworks, especially <a href="https://remix.run/" className='text-white rounded bg-slate-800 dark:text-black dark:bg-slate-300 dark:hover:bg-purple-500' > Remix.Run</a> & <a href="https://nextjs.org/" className=' dark:bg-slate-300  bg-slate-800 rounded text-white dark:text-black dark:hover:bg-blue-500' >NextJs.</a> </p> <p className="pl-1 pb-1"> Precision defines me, both in the digital realm and on the court. </p> 
             <p className="pl-1 pb-4 mb-1"> Let's connect!</p>
           </div>
         </div>
