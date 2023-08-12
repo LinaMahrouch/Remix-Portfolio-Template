@@ -61,11 +61,7 @@ const Navbar = () => {
 
                                     </NavLink>
                                    
-                                    <NavLink className={({ isActive }) => isActive ? 'border-purple-900  dark:text-white h-full inline-flex items-center px-1 pt-1 border-b-2  font-medium' : "hover:text-gray-800 border-transparent text-gray-500 dark:text-gray-200 dark:hover:text-white inline-flex items-center px-1 pt-1 border-b-2  font-medium"}
-                                        to="/contactme">
-                                        Contact Me
-
-                                    </NavLink>
+                                   
                                     
 
                                 </div>
@@ -151,7 +147,7 @@ const Navbar = () => {
                         <div className='pt-2 pb-3 space-y-1 '>
                             <NavLink
                                 className={({ isActive }) => isActive ? "bg-teal-50  border-violet-500 dark:text-slate-100  block pl-3 pr-4 py-2 border-l-4 text-base font-medium dark:bg-violet-900"
-                                    : "border-transparent text-gray-500 hover:bg-gray-50 hover:border-indigo-900 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium dark:text-white dark:hover:bg-gray-700"}
+                                    : "border-transparent text-gray-500 hover:bg-gray-50 hover:border-indigo-900 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium dark:text-white dark:hover:bg-neutral-600"}
                                 to="/">
 
                                 Home
@@ -171,13 +167,7 @@ const Navbar = () => {
                                 Projects
                             </NavLink>
                            
-                            <NavLink
-                                className={({ isActive }) => isActive ? "bg-teal-50 border-violet-500 text-teal-500 block pl-3 pr-4 py-2 border-l-4 text-base font-medium dark:bg-gray-800"
-                                    : "border-transparent text-gray-500 hover:bg-gray-50 hover:border-indigo-900 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium dark:text-white dark:hover:bg-neutral-600"}
-                                to="/contactme">
-
-                                Contact me
-                            </NavLink>
+                           
                         </div>
 
 
