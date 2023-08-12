@@ -1,4 +1,4 @@
-import React, { useState, useEffect, FC } from 'react';
+import { useState, useEffect, FC } from 'react';
 import { motion } from 'framer-motion';
 
 interface TypingEffectProps {
@@ -19,7 +19,7 @@ const TypingEffect: FC<TypingEffectProps> = ({ text, typingSpeed = 100 }) => {
       }
 
       if (index === text.length) {
-        clearInterval(interval);  // Stops the interval when the text is fully typed out
+        clearInterval(interval); // Stops the interval when the text is fully typed out
       }
     };
 
@@ -29,7 +29,11 @@ const TypingEffect: FC<TypingEffectProps> = ({ text, typingSpeed = 100 }) => {
   }, [text, typingSpeed]);
 
   return (
-    <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
+    <motion.p
+      className="mt-3"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+    >
       {visibleText}
     </motion.p>
   );

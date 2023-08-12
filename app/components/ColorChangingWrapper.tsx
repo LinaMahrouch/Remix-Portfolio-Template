@@ -7,8 +7,6 @@ interface ColorChangingWrapperProps {
   size?: 'small' | 'medium' | 'large';
 }
 
-
-
 const ColorChangingWrapper: React.FC<ColorChangingWrapperProps> = ({ children, size = 'medium' }) => {
   // Define an array of hex colors you'd like to transition between
   const colors = ['#483D8B', '#7B68EE', '#3357FF', '#9370DB', '#9370DB',	'#808080'];
@@ -25,7 +23,7 @@ const ColorChangingWrapper: React.FC<ColorChangingWrapperProps> = ({ children, s
       break;
     case 'medium':
     default:
-      fontSize = '2rem';
+      fontSize = '1.85rem';
       break;
   }
   const styles: CSSProperties = {
