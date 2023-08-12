@@ -7,12 +7,11 @@ import { createThemeSessionResolver } from "remix-themes";
     {
         cookie: { 
         name:"__remix-themes",
-        domain : process.env.NODE_ENV !== 'development'? "test": null,
         path: '/', //cookie here will work in all routes 
         httpOnly: true,
         sameSite : 'lax',
         secrets : ['secret'],
-        secure: process.env.NODE_ENV === 'development' ? false : true,
+        secure: process.env.NODE_ENV === "production"
     },
  
 });
