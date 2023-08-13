@@ -7,5 +7,4 @@ node_modules
 
 /build/
 /public/build
-/api/index.js
-/api/index.js.map
+/api/
