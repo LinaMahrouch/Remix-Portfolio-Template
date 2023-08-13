@@ -8,7 +8,14 @@ This is a Remix based portfolio made with:
 - [Headlessui](https://headlessui.com/)
 - [Vercel For deployement](https://vercel.com/docs/concepts/deployments/overview)
 
+### Don't forget to run these commands:
+```sh 
+npm i remix-themes prismjs graphql graphql-request @graphcms/rich-text-react-renderer @headlessui/react
+```
+
 ### [Remix Docs](https://remix.run/docs)
+
+
 
 ## Deployment
 
