@@ -37,8 +37,8 @@ const ContactMe: React.FC = () => {
   
     return (
         
-       <div className="flex flex-col items-center justify-center p-4 "> {/* This ensures the content is centered vertically and horizontally in the viewport */}
-  <h1 className="text-4xl font-bold mb-6">My Socials</h1> {/* Adjust the margin-bottom (mb-8) as needed */}
+       <div className="flex flex-col items-center p-8 min-h-screen "> {/* This ensures the content is centered vertically and horizontally in the viewport */}
+  <h1 className="text-4xl font-bold p-4 mb-6">My Socials</h1> {/* Adjust the margin-bottom (mb-8) as needed */}
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 ">
        
         <SocialCard
