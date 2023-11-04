@@ -43,8 +43,8 @@ export const NavbarItem = ({
     <NavLink
       className={({ isActive }) =>
         isActive
-          ? 'border-purple-900   dark:text-white h-full inline-flex items-center px-1 pt-1 border-b-2  font-semibold'
-          : 'border-transparent text-gray-500 dark:text-gray-200 dark:hover:text-white dark:hover:bg-zinc-700 inline-flex items-center px-1 pt-1 border-b-2  font-semibold '
+          ? 'border-slate-900    h-full inline-flex items-center px-1 pt-1 border-b-2  font-semibold'
+          : 'border-transparent text-black   dark:hover:bg-zinc-700 inline-flex items-center px-1 pt-1 border-b-2  font-semibold '
       }
       to={to}
     >
@@ -56,13 +56,13 @@ export const NavbarItem = ({
 export const GitHubButton = () => {
   return (
     <button>
-      <a href="https://github.com/LinaMahrouch" target="_blank">
+      <a href="https://github.com/LinaMahrouch" target="_blank" rel="noreferrer">
         <motion.svg
           viewBox="0 0 16 16"
           fill="currentColor"
           height="1em"
           width="1em"
-          className="w-6 h-6  dark:text-slate-100 dark:hover:text-slate-300"
+          className="w-6 h-6 "
           whileHover="hover"
           variants={imageVariants}
           initial="initial"

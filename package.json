@@ -8,20 +8,20 @@
   },
   "dependencies": {
     "@graphcms/rich-text-react-renderer": "^0.6.1",
-    "@headlessui/react": "^1.7.16",
+    "@headlessui/react": "^1.7.17",
     "@remix-run/css-bundle": "^1.19.2",
     "@remix-run/node": "^1.19.2",
     "@remix-run/react": "^1.19.2",
     "@remix-run/vercel": "^1.19.2",
     "@vercel/node": "^2.10.3",
     "framer-motion": "^10.15.1",
-    "graphql": "^16.7.1",
+    "graphql": "^16.8.1",
     "graphql-request": "^6.1.0",
     "isbot": "^3.6.8",
     "prismjs": "^1.29.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "remix-themes": "^1.2.1",
+    "remix-themes": "^1.2.2",
     "source-map-support": "^0.5.21"
   },
   "devDependencies": {

@@ -1,43 +1,36 @@
-import { Disclosure } from '@headlessui/react';
-import { Link } from '@remix-run/react';
-import DarkThemeButton from './DarkThemeButton';
-import ColorChangingWrapper from './ColorChangingWrapper';
-import { motion } from 'framer-motion';
-
-import {
-  NavbarItem,
-  NavbarMenuItem,
-  GitHubButton,
-  MenuButtonIcon,
-} from './NavbarPartials';
-
+import { Disclosure } from "@headlessui/react";
+import DarkThemeButton from "../DarkThemeButton";
+import { Link } from "@remix-run/react";
+import { motion } from "framer-motion";
+import { GitHubButton, MenuButtonIcon, NavbarMenuItem } from "../NavbarPartials";
 const imageVariants = {
   initial: { scale: 1 },
   hover: { scale: 1.1 },
 };
 
-const Navbar = () => {
-  return (
+export default function TemNavbar() {
+    return (
+   <>
     <Disclosure as="header">
       {({ open }) => (
         <>
-          <div className="md:mx-5 px-6 lg:px-8 font-bold">
-            <div className="flex justify-between h-16">
-              <div className="flex justify-between w-full">
-                <div className="flex items-center text-3xl ">
-                  <Link to="/">
-                    <ColorChangingWrapper size="medium">
-                      ElinaCodes
-                    </ColorChangingWrapper>
+          <div className="mx-auto max-w-screen-xl px-6 dark:text-white">
+              <div className="flex justify-between items-center py-4">
+                 <div>
+                  <Link to="/" className="text-3xl font-bold">
+                    
+                     YourName
+                  
                   </Link>
                 </div>
-                <div className="hidden sm:nl-6 sm:flex sm:space-x-8 ">
+                <div className="hidden sm:flex space-x-8 items-center">
                   {/*navlink gives an active state*/}
-                  <NavbarItem to="/blog">Articles</NavbarItem>
-                  <NavbarItem to="/">About</NavbarItem>
-                  <NavbarItem to="/projects">Contact Me</NavbarItem>
-                </div>
-                <div className="hidden sm:nl-6 sm:flex sm:space-x-8">
+                  <nav className="flex justify-center space-x-10 py-4">
+        <a href="/blog" className="text-black dar font-semibold dark:text-white">Articles</a>
+        <a href="/projects" className="text-black font-semibold dark:text-white">Projects</a>
+        <a href="/Contact" className="text-black font-semibold dark:text-white">Contact Me</a>
+      </nav>
+                
                   {/*switch between dark and light mode*/}
                   <DarkThemeButton />
 
@@ -48,7 +41,7 @@ const Navbar = () => {
                         fill="currentColor"
                         height="1em"
                         width="1em"
-                        className="w-6 h-6  dark:text-slate-100 dark:hover:text-slate-300"
+                        className="w-6 h-6  "
                         whileHover="hover"
                         variants={imageVariants}
                         initial="initial"
@@ -61,38 +54,39 @@ const Navbar = () => {
                       </motion.svg>
                     </a>
                   </button>
-                </div>
+                
                 {/*test*/}
               </div>
-              <div className="-mr-3 flex items-center sm:hidden">
-                <div className="flex space-x-4">
+              <div className="sm:hidden flex items-center space-x-4">
                   <DarkThemeButton />
                   <GitHubButton />
-                </div>
+      
 
-                <Disclosure.Button className="inline-flex item-center justify-center p-2 ml-3 rounded-md text-zinc-800 dark:text-zinc-400 dark:hover:text-pink-100 hover:text-pink-100 hover:bg-zinc-800 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-purple-800 dark:hover:bg-zinc-800">
+                <Disclosure.Button className="p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-inset">
                   <MenuButtonIcon isOpen={open} />
                 </Disclosure.Button>
+                </div>
               </div>
             </div>
-          </div>
+         
+          
           <Disclosure.Panel className="sm:hidden ">
-            <div className="pt-2 pb-3 space-y-1 ">
+          <div className="px-6 pt-2 pb-3 space-y-1">
               <NavbarMenuItem
                 to="/"
-                activeExtraClass="dark:text-slate-100 dark:bg-violet-900"
+                activeExtraClass=""
               >
                 Home
               </NavbarMenuItem>
               <NavbarMenuItem
                 to="/blog"
-                activeExtraClass="dark:text-slate-100 dark:bg-zinc-600"
+                activeExtraClass=" d"
               >
                 Blog
               </NavbarMenuItem>
               <NavbarMenuItem
                 to="/projects"
-                activeExtraClass="text-teal-500 dark:bg-gray-800"
+                activeExtraClass=" "
               >
                 Projects
               </NavbarMenuItem>
@@ -101,7 +95,8 @@ const Navbar = () => {
         </>
       )}
     </Disclosure>
-  );
-};
-
-export default Navbar;
+    </>
+     
+    );
+  }
+  

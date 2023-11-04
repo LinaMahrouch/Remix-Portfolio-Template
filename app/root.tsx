@@ -1,5 +1,5 @@
 
-import { logDevReady, type LinksFunction, type LoaderArgs } from "@remix-run/node";
+import { type LinksFunction, type LoaderArgs } from "@remix-run/node";
 import {
   Links,
   LiveReload,
@@ -13,9 +13,10 @@ import {
 import stylesheet from "~/tailwind.css";
 import { darkSessionResolver } from "./utils/session.server";
 import { PreventFlashOnWrongTheme, ThemeProvider, useTheme } from "remix-themes";
-import Navbar from "./components/Navbar";
+
 
 import { ReactNode } from "react";
+import TemNavbar from "./components/Template/TemNavbar";
 
 export const links: LinksFunction = () => [
   { rel: "stylesheet", href: stylesheet },
@@ -56,7 +57,7 @@ export default function AppWithProvider(){
         <PreventFlashOnWrongTheme ssrTheme={Boolean(theme)} />
         <Links />
       </head>
-      <body className="bg-white text-black dark:bg-stone-900 dark:text-white font-medium h-full selection:bg-gray-50 dark: selection:  ">
+      <body className="bg-white text-black dark:bg-black  dark:text-white  ">
      <Layout>
      <Outlet />
       <ScrollRestoration />
@@ -72,8 +73,9 @@ function Layout ({children} : {children : ReactNode} )
 {
   return(
   <div>
-    <Navbar/>
-    <main className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-4">{children}</main>
+    <TemNavbar/>
+  
+    <main className=" max-w-6xl mx-auto px-4 sm:px-6 lg:px-4 mt-5">{children}</main>
 
   </div>
   )
