@@ -18,9 +18,11 @@
     "graphql": "^16.8.1",
     "graphql-request": "^6.1.0",
     "isbot": "^3.6.8",
+    "lucide-react": "^0.292.0",
     "prismjs": "^1.29.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-social-icons": "^6.6.0",
     "remix-themes": "^1.2.2",
     "source-map-support": "^0.5.21"
   },

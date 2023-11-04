@@ -1,36 +1,50 @@
 import { Disclosure } from "@headlessui/react";
-import DarkThemeButton from "../DarkThemeButton";
+import DarkThemeButton from "./DarkThemeButton";
 import { Link } from "@remix-run/react";
 import { motion } from "framer-motion";
-import { GitHubButton, MenuButtonIcon, NavbarMenuItem } from "../NavbarPartials";
+import { GitHubButton, MenuButtonIcon, NavbarMenuItem } from "./NavbarPartials";
+
 const imageVariants = {
   initial: { scale: 1 },
   hover: { scale: 1.1 },
 };
 
 export default function TemNavbar() {
-    return (
-   <>
-    <Disclosure as="header">
-      {({ open }) => (
-        <>
-          <div className="mx-auto max-w-screen-xl px-6 dark:text-white">
+  return (
+    <>
+      <Disclosure as="header">
+        {({ open }) => (
+          <>
+            <div className="mx-auto max-w-screen-xl px-6 dark:text-white">
               <div className="flex justify-between items-center py-4">
-                 <div>
+                <div>
                   <Link to="/" className="text-3xl font-bold">
-                    
-                     YourName
-                  
+                    YourName
                   </Link>
                 </div>
                 <div className="hidden sm:flex space-x-8 items-center">
                   {/*navlink gives an active state*/}
                   <nav className="flex justify-center space-x-10 py-4">
-        <a href="/blog" className="text-black dar font-semibold dark:text-white">Articles</a>
-        <a href="/projects" className="text-black font-semibold dark:text-white">Projects</a>
-        <a href="/Contact" className="text-black font-semibold dark:text-white">Contact Me</a>
-      </nav>
-                
+                    <a
+                      href="/blog"
+                      className="text-black dar font-semibold dark:text-white"
+                    >
+                      Articles
+                    </a>
+                    <a
+                      href="/projects"
+                      className="text-black font-semibold dark:text-white"
+                    >
+                      Projects
+                    </a>
+                    <a
+                      href="/Contactme"
+                      className="text-black font-semibold dark:text-white"
+                    >
+                      Contact Me
+                    </a>
+                  </nav>
+
                   {/*switch between dark and light mode*/}
                   <DarkThemeButton />
 
@@ -54,49 +68,36 @@ export default function TemNavbar() {
                       </motion.svg>
                     </a>
                   </button>
-                
-                {/*test*/}
-              </div>
-              <div className="sm:hidden flex items-center space-x-4">
+
+                  {/*test*/}
+                </div>
+                <div className="sm:hidden flex items-center space-x-4">
                   <DarkThemeButton />
                   <GitHubButton />
-      
 
-                <Disclosure.Button className="p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-inset">
-                  <MenuButtonIcon isOpen={open} />
-                </Disclosure.Button>
+                  <Disclosure.Button className="p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-inset">
+                    <MenuButtonIcon isOpen={open} />
+                  </Disclosure.Button>
                 </div>
               </div>
             </div>
-         
-          
-          <Disclosure.Panel className="sm:hidden ">
-          <div className="px-6 pt-2 pb-3 space-y-1">
-              <NavbarMenuItem
-                to="/"
-                activeExtraClass=""
-              >
-                Home
-              </NavbarMenuItem>
-              <NavbarMenuItem
-                to="/blog"
-                activeExtraClass=" d"
-              >
-                Blog
-              </NavbarMenuItem>
-              <NavbarMenuItem
-                to="/projects"
-                activeExtraClass=" "
-              >
-                Projects
-              </NavbarMenuItem>
-            </div>
-          </Disclosure.Panel>
-        </>
-      )}
-    </Disclosure>
+
+            <Disclosure.Panel className="sm:hidden ">
+              <div className="px-6 pt-2 pb-3 space-y-1">
+                <NavbarMenuItem to="/" activeExtraClass="">
+                  Home
+                </NavbarMenuItem>
+                <NavbarMenuItem to="/blog" activeExtraClass=" d">
+                  Blog
+                </NavbarMenuItem>
+                <NavbarMenuItem to="/projects" activeExtraClass=" ">
+                  Projects
+                </NavbarMenuItem>
+              </div>
+            </Disclosure.Panel>
+          </>
+        )}
+      </Disclosure>
     </>
-     
-    );
-  }
-  
+  );
+}

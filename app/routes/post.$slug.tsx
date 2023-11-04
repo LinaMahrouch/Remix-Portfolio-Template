@@ -52,7 +52,7 @@ export async function loader({ params }: LoaderArgs) {
         <div className="space-y-1 ">
         
           <div className='pb-3'>
-            <h1 className="text-2xl font-extrabold leading-9  text-zinc-900 dark:text-gray-200 sm:text-4xl sm:leading-10 md:text-5xl md:leading-14">
+            <h1 className="text-2xl font-bold leading-9  text-zinc-900 dark:text-gray-200 sm:text-4xl sm:leading-10 md:text-5xl md:leading-14">
               {post.post.title}
             </h1>
           </div>

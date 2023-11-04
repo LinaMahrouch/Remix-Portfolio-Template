@@ -1,31 +1,28 @@
+import React, { ReactElement } from 'react';
 
-import React from 'react';
-
+// Define an interface for the props
 interface SocialCardProps {
   username: string;
   service: string;
   href: string;
-  icon: JSX.Element; // Expect an icon element to be passed
+  icon: ReactElement; // Assuming the icon is a JSX element, such as an SVG
 }
 
-const SocialCard = ({ username, service, href, icon }: SocialCardProps) => {
+// Define the SocialCard component with typed props
+const SocialCard: React.FC<SocialCardProps> = ({ username, service, href, icon }) => {
   return (
-    <a
-      href={href}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="relative block p-4 bg-gray-800 bg-opacity-25 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 ease-in-out overflow-hidden hover:scale-105 transform transition-transform duration-500"
-    >
-      <div className="flex items-center space-x-3">
-        <div className="text-white text-opacity-75 hover:text-opacity-100 transition-all duration-300">
+    <div className="overflow-hidden relative duration-300 border rounded-xl dark:bg-slate-300 bg-zinc-90 dark:hover:bg-zinc-400 hover:bg-zinc-800 group bg-black hover:border-zinc-400 border-zinc-600 min-h-[250px] w-[300px]"> {/* Adjust the min-h and w values as needed */}
+      {/* ... rest of your component */}
+      <a target="_blank" className="p-4 relative flex flex-col items-center gap-4 duration-700 group md:gap-8 md:py-24 lg:pb-48 md:p-16" href={href} relgroup-hover:text-white="noreferrer" rel="noreferrer">
+        <span className="relative z-10 flex items-center justify-center w-12 h-12 text-sm duration-1000 border rounded-full text-zinc-200  group-hover:bg-zinc-900 border-zinc-500 bg-zinc-900 group-hover:border-zinc-200 drop-shadow-orange">
           {icon}
+        </span>
+        <div className="z-10 flex flex-col items-center">
+          <span className="lg:text-xl font-medium duration-150 xl:text-3xl dark:text-black text-zinc-200 dark:group-hover:text-slate-800 group-hover:text-white font-display">{username}</span>
+          <span className="mt-4 text-sm text-center duration-1000 text-zinc-400 dark:text-black dark:group-hover:text-slate-800 group-hover:text-zinc-200">{service}</span>
         </div>
-        <div className="text-white font-medium">{username}</div>
-      </div>
-      <div
-        className="absolute inset-0 bg-gradient-to-r from-blue-500 to-pink-500 rounded-lg opacity-0 hover:opacity-50 transition-opacity duration-300"
-      ></div>
-    </a>
+      </a>
+    </div>
   );
 };
 
