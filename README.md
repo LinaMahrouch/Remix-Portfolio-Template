@@ -1,5 +1,5 @@
-# Remix-portfolio!
-![image](https://github.com/LinaMahrouch/remix-portfolio/assets/109791074/36cd181f-163d-4230-8d63-e4b70524a31b)
+# Remix-portfolio-Template!
+
 
 This is a Remix based portfolio made with:
 - [Remix.Run](https://remix.run)
