@@ -18,15 +18,15 @@ const ContactMe = () => {
         icon={TwitterIcon}
       />
       <SocialCard
-        username="dev@chronark.com"
+        username="lina.mahrouch01@gmail.com"
         service="Email"
-        href="mailto:dev@chronark.com"
+        href="mailto:lina.mahrouch01@gmail.com"
         icon={EmailIcon}
       />
       <SocialCard
-        username="chronark"
+        username="Elina_Codes"
         service="GitHub"
-        href="https://github.com/chronark"
+        href="https://https://github.com/LinaMahrouch"
         icon={GithubIcon}
       />
     </div>
