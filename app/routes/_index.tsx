@@ -44,29 +44,32 @@ export default function Index() {
         My Recent Posts
       </h1>
       <ul>
-         {posts.posts.slice(0, 3).map((post) => 
-            <li key={post.id} className="py-4">
-              <article className="space-y-2">
-                <Link
-                  to={`/post/${post.slug}`}
-                  prefetch="intent"
-                >
-                  <h3 className="text-xl font-bold leading-6 tracking-tight mb-2 dark:text-slate-500">
-                      {post.title}
-                  </h3>
-                  <div className="flex justify-between items-start ">
-                    <div className="prose max-w-none w-3/4 dark:text-slate-300" >
-                      {post.overview}
-                    </div>
-                    <p className="text-base font-medium leading-6 w-1/4 text-right">
-                      {new Date(post.createdAt).toISOString().split('T')[0]}
-                    </p>
-                  </div>
-                </Link>
-              </article>
-            </li>
-          )}
-      </ul>
+  {posts.posts.slice(0, 3).map((post) => 
+    <li key={post.id} className="py-4">
+      <article className="space-y-2 xl:grid xl:grid-cols-4 xl:items-baseline xl:space-y-0 hover:bg-zinc-200 dark:hover:bg-zinc-800">
+        {/* This div will contain the date, which we want to stack on top on small screens */}
+        <div className="xl:col-span-1">
+          <p className="text-base font-medium leading-6 dark:text-zinc-500 text-zinc-700">
+            {new Date(post.createdAt).toISOString().split('T')[0]}
+          </p>
+        </div>
+        {/* The link and post content will follow */}
+        <Link
+          to={`/post/${post.slug}`}
+          prefetch="intent"
+          className="xl:col-span-3" // This will ensure the link takes up the remaining space on larger screens
+        >
+          <h3 className="text-xl font-bold leading-6 tracking-tight mb-2 dark:text-slate-500">
+            {post.title}
+          </h3>
+          <div className="prose max-w-none dark:text-slate-300">
+            {post.overview}
+          </div>
+        </Link>
+      </article>
+    </li>
+  )}
+</ul>
     </div>
   );
 }
