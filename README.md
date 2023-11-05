@@ -1,10 +1,10 @@
 # Remix-portfolio-Template!
-
+![twitter-portfolio](https://github.com/LinaMahrouch/Remix-Portfolio-Template/assets/109791074/cacc78d6-079a-4a8d-9829-0c706429eb82)
 
 This is a Remix based portfolio made with:
 - [Remix.Run](https://remix.run)
 - [Tailwind.css](https://tailwindcss.com/)
-- [GraphQl](https://graphql.org/)
+- [Hygraph](https://hygraph.com/)
 - [Headlessui](https://headlessui.com/)
 - [Vercel For deployement](https://vercel.com/docs/concepts/deployments/overview)
 
