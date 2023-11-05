@@ -4,7 +4,7 @@ import { useLoaderData } from '@remix-run/react';
 import { gql } from 'graphql-request';
 import React, { useEffect } from 'react'
 import { hygraph } from '~/utils/hygraph.server';
-import { PostId } from '~/utils/interface';
+import type { PostId } from '~/utils/interface';
 import Prism from "prismjs";
 import "prismjs/plugins/line-numbers/prism-line-numbers";
 import theme from "prismjs/themes/prism-tomorrow.css";
@@ -87,9 +87,11 @@ export async function loader({ params }: LoaderArgs) {
                   />
                 ),
                 a: ({ children, openInNewTab, href, rel, ...rest }) => (
+                  //handling the target attribute securely in the link, to avoid security issues
                   <a
                     href={href}
                     target={openInNewTab ? "_blank" : "_self"}
+                    rel={openInNewTab ? "noopener noreferrer" : undefined}
                     {...rest}
                     className="text-zinc-200 hover:text-zinc-600"
                   >

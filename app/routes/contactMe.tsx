@@ -1,7 +1,7 @@
 import SocialCard from "~/components/Template/SocialCard";
-import { ReactElement } from 'react';
+import type { ReactElement } from 'react';
 
-const ContactMe: React.FC = () => {
+const ContactMe= () => {
     // Define your icons here as React Elements
     const TwitterIcon: ReactElement = (
       // Your Twitter SVG icon HERE
@@ -39,13 +39,14 @@ const ContactMe: React.FC = () => {
         
        <div className="flex flex-col items-center p-8 min-h-screen "> {/* This ensures the content is centered vertically and horizontally in the viewport */}
   <h1 className="text-4xl font-bold p-4 mb-6">My Socials</h1> {/* Adjust the margin-bottom (mb-8) as needed */}
-      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 ">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 ">
        
         <SocialCard
           username="@Lina_VLR"
           service="Twitter"
           href="https://twitter.com/lina_VLR"
           icon={TwitterIcon}
+        
           
         />
         <SocialCard
