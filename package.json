@@ -35,14 +35,22 @@
     "@types/react": "^18.0.35",
     "@types/react-dom": "^18.0.11",
     "@types/source-map-support": "^0.5.6",
-    "eslint": "^8.47.0",
+    "eslint": "^8.53.0",
     "husky": "^8.0.3",
-    "lint-staged": "^13.2.3",
-    "prettier": "^3.0.1",
+    "lint-staged": "^13.3.0",
+    "prettier": "^3.0.3",
     "tailwindcss": "^3.3.3",
     "typescript": "^5.0.4"
   },
   "engines": {
     "node": ">=14.0.0"
+  },
+  "lint-staged": {
+    "**/*.{ts, js, jsx,tsx,mdx}": [
+      "prettier --write"
+    ],
+    "**/*.{ts,tsx}": [
+      "eslint --fix"
+    ]
   }
 }
