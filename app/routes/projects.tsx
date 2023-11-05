@@ -40,7 +40,7 @@ const Projects = () => {
       {projects.projects.map((project) => (
         <div
           key={project.id}
-          className="flex flex-col bg-black border border-gray-700 shadow-lg rounded-lg overflow-hidden w-96" // Adjust the width here with Tailwind's w- class
+          className="flex flex-col bg-black border border-gray-700 shadow-lg rounded-lg overflow-hidden w-96 transition-transform duration-300 hover:scale-105"
         >
           <img
             className="w-full object-cover h-48" // Adjust the height here with Tailwind's h- class
