@@ -49,7 +49,7 @@ export default function TemNavbar() {
                   <DarkThemeButton />
 
                   <button>
-                    <a href="https://github.com/LinaMahrouch" target="_blank">
+                    <a href="https://github.com/LinaMahrouch" target="_blank" rel="noreferrer">
                       <motion.svg
                         viewBox="0 0 16 16"
                         fill="currentColor"
@@ -68,8 +68,6 @@ export default function TemNavbar() {
                       </motion.svg>
                     </a>
                   </button>
-
-                  {/*test*/}
                 </div>
                 <div className="sm:hidden flex items-center space-x-4">
                   <DarkThemeButton />
@@ -83,15 +81,18 @@ export default function TemNavbar() {
             </div>
 
             <Disclosure.Panel className="sm:hidden ">
-              <div className="px-6 pt-2 pb-3 space-y-1">
-                <NavbarMenuItem to="/" activeExtraClass="">
-                  Home
+              <div className="px-6 pt-2 pb-3 space-y-1 font-semibold text-black">
+                <NavbarMenuItem
+                  to="/blog"
+                  activeExtraClass="font-semibold text-black bg-zinc-500"
+                >
+                  Articles
                 </NavbarMenuItem>
-                <NavbarMenuItem to="/blog" activeExtraClass=" d">
-                  Blog
-                </NavbarMenuItem>
-                <NavbarMenuItem to="/projects" activeExtraClass=" ">
+                <NavbarMenuItem to="/projects" activeExtraClass=" font-semibold text-black bg-zinc-500">
                   Projects
+                </NavbarMenuItem>
+                <NavbarMenuItem to="/contactMe" activeExtraClass="font-semibold text-black bg-zinc-500 ">
+                  Contact Me
                 </NavbarMenuItem>
               </div>
             </Disclosure.Panel>
