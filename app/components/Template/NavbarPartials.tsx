@@ -55,7 +55,7 @@ export const NavbarItem = ({
 
 export const GitHubButton = () => {
   return (
-    <button>
+    <button aria-label="Check my GitHub" >
       <a href="https://github.com/LinaMahrouch" target="_blank" rel="noreferrer">
         <motion.svg
           viewBox="0 0 16 16"
@@ -83,6 +83,7 @@ export const MenuButtonIcon = ({ isOpen }: { isOpen: boolean }) => {
     <>
       {isOpen ? (
         <svg
+          aria-label={isOpen ? "Close menu" : "Open menu"}
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
           viewBox="0 0 24 24"

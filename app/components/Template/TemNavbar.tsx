@@ -27,7 +27,7 @@ export default function TemNavbar() {
                   <nav className="flex justify-center space-x-10 py-4">
                     <a
                       href="/blog"
-                      className="text-black dar font-semibold dark:text-white"
+                      className="text-black font-semibold dark:text-white"
                     >
                       Articles
                     </a>
@@ -49,7 +49,7 @@ export default function TemNavbar() {
                   <DarkThemeButton />
 
                   <button>
-                    <a href="https://github.com/LinaMahrouch" target="_blank" rel="noreferrer">
+                    <a href="https://github.com/LinaMahrouch" target="_blank" rel="noreferrer" aria-label="View GitHub Profile">
                       <motion.svg
                         viewBox="0 0 16 16"
                         fill="currentColor"
@@ -91,7 +91,7 @@ export default function TemNavbar() {
                 <NavbarMenuItem to="/projects" activeExtraClass=" font-semibold text-black bg-zinc-500">
                   Projects
                 </NavbarMenuItem>
-                <NavbarMenuItem to="/contactMe" activeExtraClass="font-semibold text-black bg-zinc-500 ">
+                <NavbarMenuItem to="/contactme" activeExtraClass="font-semibold text-black bg-zinc-500 ">
                   Contact Me
                 </NavbarMenuItem>
               </div>

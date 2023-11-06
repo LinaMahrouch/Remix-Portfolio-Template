@@ -52,8 +52,10 @@ export default function AppWithProvider(){
     <html lang="en" data-theme ={dTheme ?? ""}>
       <head>
         <meta charSet="utf-8" />
+        <meta name="description" content="A minimalistic remix portfolio template" />
         <meta name="viewport" content="width=device-width,initial-scale=1" />
         <Meta />
+        <title>Remix Portfolio Template</title>
         <PreventFlashOnWrongTheme ssrTheme={Boolean(theme)} />
         <Links />
       </head>

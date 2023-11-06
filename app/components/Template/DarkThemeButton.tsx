@@ -2,7 +2,7 @@ import { Theme, useTheme } from 'remix-themes';
 const DarkThemeButton = () => {
   const [darkTheme, setDarkTheme] = useTheme();
   return (
-    <button
+    <button aria-label="Switch to dark theme"
       onClick={() =>
         setDarkTheme((prev) => (prev === Theme.DARK ? Theme.LIGHT : Theme.DARK))
       }

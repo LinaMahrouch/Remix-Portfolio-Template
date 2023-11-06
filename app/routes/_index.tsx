@@ -48,7 +48,7 @@ export default function Index() {
             <article className="p-4 rounded-ld space-y-2 xl:grid xl:grid-cols-4 xl:items-baseline xl:space-y-0 hover:bg-zinc-200 dark:hover:bg-zinc-800">
               {/* This div will contain the date, which we want to stack on top on small screens */}
               <div className="xl:col-span-1">
-                <p className="text-base font-medium leading-6 dark:text-zinc-500 text-zinc-700">
+                <p className="text-base font-medium leading-6 dark:text-zinc-300 text-zinc-700">
                   {new Date(post.createdAt).toISOString().split("T")[0]}
                 </p>
               </div>
@@ -58,9 +58,9 @@ export default function Index() {
                 prefetch="intent"
                 className="xl:col-span-3" // This will ensure the link takes up the remaining space on larger screens
               >
-                <h3 className="text-xl font-bold leading-6 tracking-tight mb-2 dark:text-slate-500">
+                <h2 className="text-xl font-bold leading-6 tracking-tight mb-2 dark:text-slate-500">
                   {post.title}
-                </h3>
+                </h2>
                 <div className="prose max-w-none dark:text-slate-300">
                   {post.overview}
                 </div>
