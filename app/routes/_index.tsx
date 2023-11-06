@@ -38,6 +38,8 @@ export default function Index() {
         imageSrc={Me}
         name="Mahrouch Lina"
         description="Software Engineer who's obsessed with learning and building new things."
+        width={128} // replace with actual image width
+        height={128} 
       />
       <h1 className="tracking-tighter font-bold dark:text-slate-300 text-slate-800 text-3xl md:text-4xl mx-auto m-6">
         My Recent Posts
