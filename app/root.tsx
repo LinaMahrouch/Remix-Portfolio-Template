@@ -1,5 +1,6 @@
 
 import { type LinksFunction, type LoaderArgs } from "@remix-run/node";
+import { Analytics } from '@vercel/analytics/react';
 import {
   Links,
   LiveReload,
@@ -60,6 +61,7 @@ export default function AppWithProvider(){
         <Links />
       </head>
       <body className="bg-white text-black dark:bg-black  dark:text-white  ">
+      <Analytics />
      <Layout>
      <Outlet />
       <ScrollRestoration />
