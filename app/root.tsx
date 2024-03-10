@@ -1,4 +1,5 @@
 
+
 import { type LinksFunction, type LoaderFunctionArgs } from "@remix-run/node";
 import {
   Links,
@@ -60,6 +61,7 @@ export default function AppWithProvider(){
         <Links />
       </head>
       <body className="bg-white text-black dark:bg-black  dark:text-white  ">
+      
      <Layout>
      <Outlet />
       <ScrollRestoration />
