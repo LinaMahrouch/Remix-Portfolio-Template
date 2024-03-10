@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link, useLoaderData } from "@remix-run/react";
-import type { LoaderArgs} from '@remix-run/node';
+import type { LoaderFunctionArgs} from '@remix-run/node';
 import { json } from '@remix-run/node';
 import { gql } from 'graphql-request';
 import { hygraph } from '~/utils/hygraph.server';
@@ -9,7 +9,7 @@ import type { Post } from '~/utils/interface';
 interface AppProps {
     posts: Post;
 }
-export async function loader({}: LoaderArgs) {
+export async function loader({}: LoaderFunctionArgs) {
     const query = gql`
     query Posts {
         posts {

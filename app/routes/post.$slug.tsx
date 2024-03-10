@@ -1,5 +1,5 @@
 import { RichText } from '@graphcms/rich-text-react-renderer';
-import { LinksFunction, LoaderArgs, json } from '@remix-run/node';
+import { LinksFunction, LoaderFunctionArgs, json } from '@remix-run/node';
 import { useLoaderData } from '@remix-run/react';
 import { gql } from 'graphql-request';
 import React, { useEffect } from 'react'
@@ -16,7 +16,7 @@ interface AppProps {
     { rel: "stylesheet", href: theme },
     { rel: "stylesheet", href: linenum },
   ];
-export async function loader({ params }: LoaderArgs) {
+export async function loader({ params }: LoaderFunctionArgs) {
     const query = gql`
           query Posts {
               post(where: {slug: "${params.slug}"}) {

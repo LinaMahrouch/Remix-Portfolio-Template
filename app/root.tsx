@@ -1,5 +1,5 @@
 
-import { type LinksFunction, type LoaderArgs } from "@remix-run/node";
+import { type LinksFunction, type LoaderFunctionArgs } from "@remix-run/node";
 import {
   Links,
   LiveReload,
@@ -10,7 +10,7 @@ import {
   useLoaderData,
 } from "@remix-run/react";
 
-import stylesheet from "~/tailwind.css";
+import stylesheet from "~/tailwind.css?url";
 import { darkSessionResolver } from "./utils/session.server";
 import { PreventFlashOnWrongTheme, ThemeProvider, useTheme } from "remix-themes";
 
@@ -23,7 +23,7 @@ export const links: LinksFunction = () => [
 ];
 
 //use a loader in order to get data
-export async function loader ({request}:LoaderArgs) {
+export async function loader ({request}:LoaderFunctionArgs) {
   const {getTheme} = await darkSessionResolver(request)
 
   return {
@@ -64,7 +64,6 @@ export default function AppWithProvider(){
      <Outlet />
       <ScrollRestoration />
       <Scripts />
-      <LiveReload />
      </Layout>
       </body>
     </html>

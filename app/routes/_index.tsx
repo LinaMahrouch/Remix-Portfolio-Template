@@ -3,7 +3,7 @@ import Me from "../../public/me.png";
 
 import React from "react";
 import { Link, useLoaderData } from "@remix-run/react";
-import type { LoaderArgs} from "@remix-run/node";
+import type { LoaderFunctionArgs} from "@remix-run/node";
 import { json } from "@remix-run/node";
 import { gql } from "graphql-request";
 import { hygraph } from "~/utils/hygraph.server";
@@ -13,7 +13,7 @@ interface AppProps {
   posts: Post;
 }
 
-export async function loader({}: LoaderArgs) {
+export async function loader({}: LoaderFunctionArgs) {
   const query = gql`
     query Posts {
       posts {
