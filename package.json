@@ -11,9 +11,9 @@
   "dependencies": {
     "@graphcms/rich-text-react-renderer": "^0.6.1",
     "@headlessui/react": "^1.7.17",
-
     "@remix-run/node": "^2.8.1",
     "@remix-run/react": "^2.8.1",
+    "@vercel/analytics": "^1.2.2",
     "@vercel/node": "^3.0.22",
     "framer-motion": "^11.0.8",
     "graphql": "^16.8.1",
