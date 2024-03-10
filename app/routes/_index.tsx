@@ -1,5 +1,5 @@
 import Profile from "~/components/Template/Profile";
-import Me from "../../public/me.png";
+import Me from "/me.png";
 
 import React from "react";
 import { Link, useLoaderData } from "@remix-run/react";

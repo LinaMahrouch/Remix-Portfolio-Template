@@ -7,8 +7,8 @@ import { hygraph } from '~/utils/hygraph.server';
 import type { PostId } from '~/utils/interface';
 import Prism from "prismjs";
 import "prismjs/plugins/line-numbers/prism-line-numbers";
-import theme from "prismjs/themes/prism-tomorrow.css";
-import linenum from "prismjs/plugins/line-numbers/prism-line-numbers.css";
+import theme from "prismjs/themes/prism-tomorrow.css?url";
+import linenum from "prismjs/plugins/line-numbers/prism-line-numbers.css?url";
 interface AppProps {
     post: PostId;
   }
