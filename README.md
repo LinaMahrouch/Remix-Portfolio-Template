@@ -1,6 +1,10 @@
 # Remix-portfolio-Template!
 ![twitter-portfolio](https://github.com/LinaMahrouch/Remix-Portfolio-Template/assets/109791074/cacc78d6-079a-4a8d-9829-0c706429eb82)
 
+![image](https://github.com/LinaMahrouch/Remix-Portfolio-Template/assets/109791074/e93c798c-6ae2-44d9-b11b-bb9c62a219e5)
+
+
+
 This is a Remix based portfolio made with:
 - [Remix.Run](https://remix.run)
 - [Tailwind.css](https://tailwindcss.com/)
