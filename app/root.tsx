@@ -1,6 +1,6 @@
 
-import { type LinksFunction, type LoaderArgs } from "@remix-run/node";
-import { Analytics } from '@vercel/analytics/react';
+
+import { type LinksFunction, type LoaderFunctionArgs } from "@remix-run/node";
 import {
   Links,
   LiveReload,
@@ -11,7 +11,7 @@ import {
   useLoaderData,
 } from "@remix-run/react";
 
-import stylesheet from "~/tailwind.css";
+import stylesheet from "~/tailwind.css?url";
 import { darkSessionResolver } from "./utils/session.server";
 import { PreventFlashOnWrongTheme, ThemeProvider, useTheme } from "remix-themes";
 
@@ -24,7 +24,7 @@ export const links: LinksFunction = () => [
 ];
 
 //use a loader in order to get data
-export async function loader ({request}:LoaderArgs) {
+export async function loader ({request}:LoaderFunctionArgs) {
   const {getTheme} = await darkSessionResolver(request)
 
   return {
@@ -61,12 +61,11 @@ export default function AppWithProvider(){
         <Links />
       </head>
       <body className="bg-white text-black dark:bg-black  dark:text-white  ">
-      <Analytics />
+      
      <Layout>
      <Outlet />
       <ScrollRestoration />
       <Scripts />
-      <LiveReload />
      </Layout>
       </body>
     </html>

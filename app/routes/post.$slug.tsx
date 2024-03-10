@@ -1,5 +1,5 @@
 import { RichText } from '@graphcms/rich-text-react-renderer';
-import { LinksFunction, LoaderArgs, json } from '@remix-run/node';
+import { LinksFunction, LoaderFunctionArgs, json } from '@remix-run/node';
 import { useLoaderData } from '@remix-run/react';
 import { gql } from 'graphql-request';
 import React, { useEffect } from 'react'
@@ -7,8 +7,8 @@ import { hygraph } from '~/utils/hygraph.server';
 import type { PostId } from '~/utils/interface';
 import Prism from "prismjs";
 import "prismjs/plugins/line-numbers/prism-line-numbers";
-import theme from "prismjs/themes/prism-tomorrow.css";
-import linenum from "prismjs/plugins/line-numbers/prism-line-numbers.css";
+import theme from "prismjs/themes/prism-tomorrow.css?url";
+import linenum from "prismjs/plugins/line-numbers/prism-line-numbers.css?url";
 interface AppProps {
     post: PostId;
   }
@@ -16,7 +16,7 @@ interface AppProps {
     { rel: "stylesheet", href: theme },
     { rel: "stylesheet", href: linenum },
   ];
-export async function loader({ params }: LoaderArgs) {
+export async function loader({ params }: LoaderFunctionArgs) {
     const query = gql`
           query Posts {
               post(where: {slug: "${params.slug}"}) {

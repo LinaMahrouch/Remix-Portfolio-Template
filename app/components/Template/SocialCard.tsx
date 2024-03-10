@@ -12,7 +12,7 @@ interface SocialCardProps {
 const SocialCard: React.FC<SocialCardProps> = ({ username, service, href, icon }) => {
   return (
       // This div will contain the card
-      <div className="overflow-hidden relative duration-300 border rounded-xl dark:bg-slate-300 dark:hover:bg-zinc-300 hover:bg-zinc-800 group bg-black hover:border-zinc-400 border-zinc-600 max-w-full h-auto transition-transform hover:scale-105">
+      <div className="overflow-hidden relative duration-300 border rounded-xl dark:bg-zinc-200 dark:hover:bg-zinc-300 hover:bg-zinc-800 group bg-black hover:border-zinc-400 border-zinc-600 max-w-full h-auto transition-transform hover:scale-105">
       <a target="_blank" className="p-4 relative flex flex-col items-center gap-4 duration-700 group md:gap-8 md:py-24 lg:pb-48 md:p-16" href={href} relgroup-hover:text-white="noreferrer" rel="noreferrer">
         <span className="relative z-10 flex items-center justify-center w-12 h-12 text-sm duration-1000 border rounded-full text-zinc-200  group-hover:bg-zinc-900 border-zinc-500 bg-zinc-900 group-hover:border-zinc-200 drop-shadow-orange">
           {icon}
