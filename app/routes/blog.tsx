@@ -42,8 +42,8 @@ const Blog = () => {
         <ul>
          {posts.posts.map((post) =>
         
-            <li key={post.id} className="py-4 ">
-              <article className="space-y-2 xl:grid xl:grid-cols-4 xl:items-baseline xl:space-y-0 hover:bg-zinc-200 dark:hover:bg-zinc-800">
+            <li key={post.id}>
+              <article className="p-4 space-y-2 xl:grid xl:grid-cols-4 xl:items-baseline xl:space-y-0 hover:bg-zinc-200 dark:hover:bg-zinc-800">
                 <div>
                   <p className="text-base font-medium leading-6 dark:text-zinc-500 text-zinc-700">
                    {new Date(post.createdAt).toISOString().split('T')[0]}
